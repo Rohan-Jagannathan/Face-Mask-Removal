@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
+import visualkeras
 from random import randint
 
 from initialize_data import *
+from unet import create_unet
 
 
 def show_sample_image():
@@ -34,7 +36,15 @@ def show_histogram():
     plt.show()
 
 
+def view_model_graphic():
+    model = create_unet(input_shape=(height, width, image_channels),
+                        n_filters=n_filters, n_classes=n_classes)
+    plt.imshow(visualkeras.layered_view(model, legend=True))
+    plt.show()
+
+
 if __name__ == '__main__':
     for i in range(0, 5):
         show_sample_image()
     show_histogram()
+    view_model_graphic()

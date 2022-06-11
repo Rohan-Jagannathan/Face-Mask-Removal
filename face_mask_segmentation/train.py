@@ -14,8 +14,6 @@ def train_model():
 
     model.summary()
 
-    visualkeras.layered_view(model, legend=True)
-
     model.compile(tf.keras.optimizers.Adam(learning_rate=0.00011183105292845106),
                   loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
                   metrics=['accuracy'])

@@ -5,6 +5,7 @@ import tensorflow as tf
 Define Double Convolution Downsampling Block
 """
 
+
 def downsample(inputs, n_filters=64, kernel_dims=3, p_dropout=0.0, pool_size=2):
     # Double convolution
     conv = tf.keras.layers.Conv2D(n_filters, kernel_size=kernel_dims, padding='same', activation='relu',
@@ -48,6 +49,7 @@ def upsample(prev_inputs, skip_inputs, n_filters=64, kernel_dims=3, stride=2):
 
 
 """Define UNet"""
+
 
 def create_unet(input_shape, n_filters, n_classes):
     inputs = tf.keras.layers.Input(input_shape)

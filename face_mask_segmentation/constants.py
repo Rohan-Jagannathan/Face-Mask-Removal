@@ -5,11 +5,11 @@ ONE_HOT_ENCODE = True
 TUNE_HYPERPARAMETERS = False
 
 """File Path Constants"""
-DATASET_PATH = 'data/'
+DATASET_PATH = '../data/'
 PROCESSED_PATH = DATASET_PATH + 'processed_files.txt'
-HDF5_PATH = DATASET_PATH + 'data.hdf5'
+HDF5_PATH = DATASET_PATH + 'dataset.hdf5'
 CHECKPOINT_PATH = 'checkpoints/'
-MODEL_PATH = 'models/segmentation/'
+MODEL_PATH = '../models/segmentation/'
 
 DATASET_SIZE = 1200
 

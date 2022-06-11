@@ -44,5 +44,5 @@ def view_sample_result(outputs, index):
 
 if __name__ == '__main__':
     out = predict()
-    for i in range(0, 5):
+    for i in range(10, 15):
         view_sample_result(out, i)
