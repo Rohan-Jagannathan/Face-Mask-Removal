@@ -1,4 +1,3 @@
-
 """## Configurations"""
 RUN_DATA_INITIALIZATION = True
 RUN_MODEL_TRAINING = True

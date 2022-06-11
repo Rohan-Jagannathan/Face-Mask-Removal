@@ -1,8 +1,9 @@
+import tensorflow as tf
+
 """# Model Architecture
 
 Define Double Convolution Downsampling Block
 """
-
 
 def downsample(inputs, n_filters=64, kernel_dims=3, p_dropout=0.0, pool_size=2):
     # Double convolution
