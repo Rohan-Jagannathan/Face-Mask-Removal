@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 from random import randint
 
-from autoencoder import get_model
 from preprocess_data import *
 
 
@@ -9,10 +8,7 @@ def view_results(indices):
     masked, segmaps, unmasked, inverse_segmaps, removed_masks = get_data()
     x, y = get_xy()
 
-    model = get_model()
-    model.compile(tf.keras.optimizers.Adam(learning_rate=0.000605186189165695),
-                  loss=tf.keras.losses.MSE)
-    model.load_weights(CHECKPOINT_PATH + '/inpainting_weights_tuned_2500_0024.h5')
+    model = tf.keras.models.load_model(MODEL_PATH)
 
     whole_data = tf.data.Dataset.from_tensors((x, y))
     outputs = model.predict(whole_data, batch_size=16)
@@ -47,7 +43,7 @@ def view_results(indices):
 
 if __name__ == '__main__':
     idxs = []
-    for i in range(0, 5):
+    for i in range(0, 10):
         idxs.append(randint(test_start, DATASET_SIZE))
     view_results(idxs)
 

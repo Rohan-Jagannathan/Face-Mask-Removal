@@ -35,6 +35,8 @@ def view_data(index):
     segmap.title.set_text('Predicted Segmentation Map')
     inverse.title.set_text('Inverse Segmentation Map')
 
+    plt.show()
+
 
 def view_model():
     model = get_model()

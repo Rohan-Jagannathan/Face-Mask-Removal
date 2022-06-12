@@ -15,7 +15,8 @@ def train():
     model.compile(tf.keras.optimizers.Adam(learning_rate=0.000605186189165695),
                   loss=tf.keras.losses.MSE)
 
-    checkpoint = tf.keras.callbacks.ModelCheckpoint(CHECKPOINT_PATH + '/inpainting_weights_unet_2500.h5', monitor='loss', save_best_only=True)
+    checkpoint = tf.keras.callbacks.ModelCheckpoint(CHECKPOINT_PATH + '/inpainting_weights_unet_2500.h5',
+                                                    monitor='loss', save_best_only=True)
     history = model.fit(train_data, batch_size=16, epochs=2500, verbose=1, shuffle=True, callbacks=[checkpoint])
 
     plt.plot(history.history['loss'], label='Training Loss')
@@ -27,3 +28,6 @@ def train():
     # Overwrites saved model with the one just trained
     # model.save(MODEL_PATH)
 
+
+if __name__ == '__main__':
+    train()

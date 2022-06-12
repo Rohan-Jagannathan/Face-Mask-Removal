@@ -1,12 +1,11 @@
-
 TRAIN_MODEL = False
 TUNE_HYPERPARAMETERS = False
 
-BASE_PATH = '/content/drive/My Drive/'
-DATASET_PATH = 'dataset/'
+BASE_PATH = '../'
+DATASET_PATH = 'data/'
 HDF5_PATH = BASE_PATH + DATASET_PATH
-CHECKPOINT_PATH = BASE_PATH + '/checkpoints'
-MODEL_PATH = BASE_PATH + 'models/inpainting/'
+CHECKPOINT_PATH = BASE_PATH + 'checkpoints'
+MODEL_PATH = BASE_PATH + 'models/inpainting_unet/'
 
 DATASET_SIZE = 1000
 

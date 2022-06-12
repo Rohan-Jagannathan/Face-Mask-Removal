@@ -6,11 +6,11 @@ from constants import *
 
 
 def get_data():
-    h5f = h5py.File(HDF5_PATH + '/dataset.hdf5', 'r')
+    h5f = h5py.File(HDF5_PATH + 'dataset.hdf5', 'r')
     unmasked = h5f['celeba'][0:DATASET_SIZE]
     masked = h5f['masked_faces'][0:DATASET_SIZE]
     # segmaps = h5f['segmentation_masks'][0:DATASET_SIZE]
-    segmap_file = h5py.File(HDF5_PATH + '/predicted_segmaps.hdf5')
+    segmap_file = h5py.File(HDF5_PATH + 'predicted_segmaps.hdf5')
     segmaps = segmap_file['segmaps'][0:DATASET_SIZE]
     h5f.close()
     segmap_file.close()
