@@ -3,3 +3,4 @@ data
 .DS_Store
 face_mask_segmentation/__pycache__/
 face_mask_segmentation/checkpoints/
+face_inpainting/__pycache__/
