@@ -1,9 +1,8 @@
 import matplotlib.pyplot as plt
-import visualkeras
-from keras.callbacks import ModelCheckpoint, EarlyStopping
+from keras.callbacks import ModelCheckpoint
 
 from unet import create_unet
-from initialize_data import *
+from preprocess_data import *
 
 
 def train_model():

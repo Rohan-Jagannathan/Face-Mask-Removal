@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import cv2 as cv
 
-from initialize_data import *
+from preprocess_data import *
 
 
 def predict():
